@@ -25,6 +25,7 @@ $(document).ready(function () {
             console.log(brewStreet)
             var brewUrl = brewData[i].website_url
             console.log(brewUrl)
+            var lost
             }
 
         });
