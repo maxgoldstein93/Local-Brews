@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 function getBrewery(){
     var state = "Pennsylvania"
     var zipcode = "15234"
@@ -11,7 +13,12 @@ function getBrewery(){
         
     });
 
-    
 };
-getBrewery()
 
+$("#search").on("click", function(event) {
+    event.preventDefault();
+    getBrewery();
+});
+ 
+
+});
