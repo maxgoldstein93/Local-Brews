@@ -10,20 +10,26 @@
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-
+        
     <!-- Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
         integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="top-bar" id="responsive-menu">
-        <div class="top-bar-right"></div>
-        <ul class="menu">
-            <li><input type="search" id="zipcode" placeholder="Search"></li>
-            <li><button type="button" id="search" class="button">Search</button></li>
-        </ul>
+    <div class="top-bar">
+        <h3>Brewery Finder</h3>
     </div>
+    <div class="callout large">
+        <div class="row column text-center">
+            <h4>Enter ZipCode to find Breweries</h4>
+            <h6>Description of the website</h6>
+            <input type="search" id="zipcode" placeholder="Enter ZipCode"/>
+            <button type="button" id="search" class="button">Search</button>
+        </div>
+    </div>
+    <footer>
+    </footer>
 
 
     <script type="text/javascript" src="brewery.js"></script>
