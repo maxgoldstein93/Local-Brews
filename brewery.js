@@ -1,9 +1,15 @@
 $(document).ready(function () {
+    getMap()
+    $("#search").on("click", function (event) {
+        event.preventDefault();
+        getBrewery();
+    });
 
     function getBrewery() {
         var state = "Pennsylvania"
-        var zipcode = "15234"
-        var queryUrl = "https://api.openbrewerydb.org/breweries?by_postal=" + zipcode
+        var zipCode = $("#zipCode").val();
+        console.log(zipCode)
+        var queryUrl = "https://api.openbrewerydb.org/breweries?by_postal=" + zipCode
         // if(state !== "")
         $.ajax({
             url: queryUrl,
@@ -24,11 +30,7 @@ $(document).ready(function () {
             zoom: 9 // starting zoom
         });
     }
-    getMap()
-    $("#search").on("click", function (event) {
-        event.preventDefault();
-        getBrewery();
-    });
+    
 
 
 });
