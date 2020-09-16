@@ -9,7 +9,7 @@ $(document).ready(function () {
             url: queryUrl,
             method: "GET"
         }).then(function (brewData) {
-            console.log(brewData)
+
 
         });
 
@@ -29,6 +29,26 @@ $(document).ready(function () {
         event.preventDefault();
         getBrewery();
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var lat = brewData[i].latitude;
+            var lon = brewData[i].longitude;
+            console.log(lat);
+            console.log(lon);
+
+
+
 
 
 });
