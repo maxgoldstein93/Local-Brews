@@ -15,7 +15,7 @@ $(document).ready(function () {
             url: queryUrl,
             method: "GET"
         }).then(function (brewData) {
-            console.log(brewData)
+
 
         });
 
@@ -31,6 +31,26 @@ $(document).ready(function () {
         });
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var lat = brewData[i].latitude;
+            var lon = brewData[i].longitude;
+            console.log(lat);
+            console.log(lon);
+
+
+
 
 
 });
