@@ -16,6 +16,17 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (brewData) {
             console.log(brewData)
+            for (var i = 0; i <= 5; i++) {
+            var brewName =brewData[i].name;
+            console.log(brewName)
+            var brewCity =brewData[i].city;
+            console.log(brewCity)
+            var brewStreet =brewData[i].street;
+            console.log(brewStreet)
+            var brewUrl = brewData[i].website_url
+            console.log(brewUrl)
+            var lost
+            }
 
         });
 
@@ -31,6 +42,13 @@ $(document).ready(function () {
         });
     }
     
+            var lat = brewData[i].latitude;
+            var lon = brewData[i].longitude;
+            console.log(lat);
+            console.log(lon);
+
+
+
 
 
 });
