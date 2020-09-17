@@ -33,18 +33,20 @@ $(document).ready(function () {
 
                 // display data dynamically for 5 day
                 var card = $("<div>").addClass("card");
+                var dataSection = $("<div>").addClass("");
+                card.append(dataSection);
                 // fill it with data[i]
-                var data = $("<h5>").text(brewName);
-                card.append(data)
+                var data = $("<h4>").text(brewName);
+                dataSection.append(data)
                 var data = $("<p>").text(brewCity);
-                card.append(data)
+                dataSection.append(data)
                 var data = $("<p>").text(brewStreet);
-                card.append(data)
+                dataSection.append(data)
                 var data = $("<p>").text(brewPhone);
-                card.append(data)
+                dataSection.append(data)
                 var data = $("<p>").text(brewUrl);
-                card.append(data)
-                var map = $("<div id='map"+ i + "' style='width: 400px; height: 300px;'></div>")
+                dataSection.append(data)
+                var map = $("<div id='map"+ i + "' style='float: right; width: 200px; height: 150px;'></div>")
                 card.append(map)
                 // append that card to #5day
 
