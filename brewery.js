@@ -2,6 +2,8 @@ $(document).ready(function () {
     getMap()
     $("#search").on("click", function (event) {
         event.preventDefault();
+        var inputEl = document.getElementById("searchFields");
+        inputEl.style.display = "none";
         getBrewery();
     });
 
