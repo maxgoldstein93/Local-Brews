@@ -16,17 +16,46 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (brewData) {
             console.log(brewData)
-            for (var i = 0; i <= 5; i++) {
-            var brewName =brewData[i].name;
-            console.log(brewName)
-            var brewCity =brewData[i].city;
-            console.log(brewCity)
-            var brewStreet =brewData[i].street;
-            console.log(brewStreet)
-            var brewUrl = brewData[i].website_url
-            console.log(brewUrl)
-            var lost
+            for (var i = 0; i < brewData.length; i++) {
+                var brewName = brewData[i].name;
+                console.log(brewName)
+                var brewCity = brewData[i].city;
+                console.log(brewCity)
+                var brewStreet = brewData[i].street;
+                console.log(brewStreet)
+                var brewUrl = brewData[i].website_url
+                console.log(brewUrl)
+                var brewPhone = brewData[i].phone;
+                console.log(brewPhone);
+                var lat = brewData[i].latitude;
+                console.log(lat);
+                var lon = brewData[i].longitude;
+                console.log(lon);
+
+                // display data dynamically for 5 day
+                var card = $("<div>").addClass("card");
+                // fill it with data[i]
+                var data = $("<h5>").text(brewName);
+                card.append(data)
+                var data = $("<p>").text(brewCity);
+                card.append(data)
+                var data = $("<p>").text(brewStreet);
+                card.append(data)
+                var data = $("<p>").text(brewPhone);
+                card.append(data)
+                var data = $("<p>").text(brewUrl);
+                card.append(data)
+
+                // append that card to #5day
+
+                $("#brewDump").append(card);
+
+
+
+
             }
+
+
 
         });
 
@@ -41,11 +70,7 @@ $(document).ready(function () {
             zoom: 9 // starting zoom
         });
     }
-    
-            var lat = brewData[i].latitude;
-            var lon = brewData[i].longitude;
-            console.log(lat);
-            console.log(lon);
+
 
 
 
