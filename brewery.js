@@ -69,7 +69,7 @@ $(document).ready(function () {
                 dataSection.append(data)
                 var data = $("<p>").text(brewPhone);
                 dataSection.append(data)
-                var data = $("<p>").text(brewUrl);
+                var data = $("<a style='color: blue !important;' href="+brewUrl+" target='_blank'>").text(brewUrl);
                 dataSection.append(data)
                 var map = $("<div class='cell' id='map" + i + "' style='float: right; width: 250px; height: 250px;'></div>")
                 card.append(map)
