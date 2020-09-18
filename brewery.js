@@ -17,6 +17,9 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (brewData) {
             console.log(brewData)
+            if(brewData.length === 0){
+                alert("new zipcode please")
+            }
             $("#brewDump").empty();
             for (var i = 0; i < brewData.length; i++) {
                 var lat = brewData[i].latitude;
