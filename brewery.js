@@ -56,11 +56,10 @@ $(document).ready(function () {
                 console.log(brewPhone);
 
                 // display data dynamically for 5 day
-                var card = $("<div>").addClass("card grid-x grid-margin-x small-up-3");
-                var dataSection = $("<div>").addClass("cell");
+                var card = $("<div>").addClass("cell medium-6 large-6");
+                var dataSection = $("<div>").addClass("card");
                 card.append(dataSection);
                 // fill it with data[i]
-<<<<<<< HEAD
                 var name = $("<h4>").addClass("card-divider").text(brewName);
                 dataSection.append(name);
                 var street = $("<p>").text(brewStreet);
@@ -71,7 +70,7 @@ $(document).ready(function () {
                 dataSection.append(phone);
                 var url = $("<a style='color: blue !important;' href="+brewUrl+" target='_blank'>").text(brewUrl);
                 dataSection.append(url);
-                var map = $("<div class='cell' id='map" + i + "' style='float: right; width: 250px; height: 250px;'></div>")
+                var map = $("<div id='map" + i + "' style='width: 500px; height: 250px; margin-bottom: 20px;'></div>")
 
                 card.append(map)
                 // append that card to #5day
