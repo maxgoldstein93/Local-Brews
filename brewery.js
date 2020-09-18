@@ -60,6 +60,7 @@ $(document).ready(function () {
                 var dataSection = $("<div>").addClass("card");
                 card.append(dataSection);
                 // fill it with data[i]
+
                 var name = $("<h4>").addClass("card-divider").text(brewName);
                 dataSection.append(name);
                 var street = $("<p>").text(brewStreet);
