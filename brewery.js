@@ -18,8 +18,25 @@ $(document).ready(function () {
         }).then(function (brewData) {
             console.log(brewData)
             if(brewData.length === 0){
-                alert("new zipcode please")
+                var newDiv = $("<div>").addClass();
+                var divMsg = $("<a>").text("Please enter a new zipcode there are no breweries in this area");
+                divMsg.attr("href", "index.html")
+                divMsg.css("font-size", "35px")
+                newDiv.append(divMsg);
+                $("#error").append(newDiv);
+                   
+            } else if(zipCode === "" || zipCode.length < 5){
+                
+                var newDiv = $("<div>").addClass();
+                var divMsg = $("<a>").text("Please enter a valid zipcode");
+                divMsg.attr("href", "index.html")
+                divMsg.css("font-size", "35px")
+                newDiv.append(divMsg);
+                console.log()
+                $("#error").append(newDiv);
+                return
             }
+
             $("#brewDump").empty();
             for (var i = 0; i < brewData.length; i++) {
                 var lat = brewData[i].latitude;
