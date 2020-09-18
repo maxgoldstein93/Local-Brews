@@ -13,6 +13,9 @@
   background-size: cover;
 }
 
+.blackbackground {
+  background-color: rgb(60, 58, 58);}
+
 .top-bar {
  background-color: black !important;
  color: white;
@@ -32,8 +35,16 @@ a {
 }
 
 .card {
-  height: 300px;
-  width: 500px;
+  height: 280px;
+  width: 300px;
+  background-color: grey !important;
+  font-weight: bold !important;
+  text-align: center;
+}
+
+.card-divider {
+  background-color: black !important;
+  color: white;
 }
 
 .marker {
