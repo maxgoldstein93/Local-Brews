@@ -1,89 +1,50 @@
 
 .hero-full-screen {
-    height: 100vh;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background: url("./assets/FremontBrewing-SparklyPhotography-CMYK-900x600.jpg") center center no-repeat;
-    background-size: cover;
-  }
-  
-  .hero-full-screen .middle-content-section {
-    text-align: center;
-    color: #fefefe;
-  }
-  
-  .hero-full-screen .top-content-section {
-    width: 100%;
-  }
-  
-  .hero-full-screen .bottom-content-section {
-    padding: 1rem;
-  }
-  
-  .hero-full-screen .bottom-content-section svg {
-    height: 3.75rem;
-    width: 3.75rem;
-    fill: #fefefe;
-  }
-  
-  .hero-full-screen .top-bar {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu-text {
-    color: #fefefe;
-  }
-  
-  .hero-full-screen .top-bar .menu li {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .hero-full-screen .top-bar .menu a {
-    color: #fefefe;
-    font-weight: bold;
-  }
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("./assets/FremontBrewing-SparklyPhotography-CMYK-900x600.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.top-content-section {
+  width: 100%;
+}
+
+.middle-content-section {
+  text-align: center;
+  color: #fefefe;
+}
 
 .card {
-  height: 400px;
+  height: 300px;
   width: 500px;
 }
 
 .marker {
-    background-image: url("assets/mapbox-icon (1).png");
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    }
-    
-    .mapboxgl-popup {
-      max-width: 200px;
-    }
-    
-    .mapboxgl-popup-content {
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
-    }
+  background-image: url("assets/mapbox-icon (1).png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
   
+.mapboxgl-popup {
+  max-width: 200px;
+}
   
-  
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}

@@ -51,7 +51,7 @@ $(document).ready(function () {
                 dataSection.append(data)
                 var data = $("<p>").text(brewUrl);
                 dataSection.append(data)
-                var map = $("<div class='cell' id='map" + i + "' style='float: right; width: 300px; height: 300px;'></div>")
+                var map = $("<div class='cell' id='map" + i + "' style='float: right; width: 250px; height: 250px;'></div>")
                 card.append(map)
                 // append that card to #5day
 
