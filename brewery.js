@@ -71,7 +71,7 @@ $(document).ready(function () {
                 dataSection.append(phone);
                 var url = $("<a style='color: blue !important;' href="+brewUrl+" target='_blank'>").text(brewUrl);
                 dataSection.append(url);
-                var map = $("<div id='map" + i + "' style='width: 500px; height: 250px; margin-bottom: 20px;'></div>")
+                var map = $("<div id='map" + i + "' style='width: 500px; height: 250px; margin-top: -20px; margin-bottom: 20px;'></div>")
 
                 card.append(map)
                 // append that card to #5day
