@@ -35,23 +35,22 @@ $(document).ready(function () {
                 var brewPhone = brewData[i].phone;
                 console.log(brewPhone);
 
-
                 // display data dynamically for 5 day
-                var card = $("<div>").addClass("card grid-x grid-margin-x small-up-2 medium-up-3");
+                var card = $("<div>").addClass("card grid-x grid-margin-x small-up-3");
                 var dataSection = $("<div>").addClass("cell");
                 card.append(dataSection);
                 // fill it with data[i]
-                var data = $("<h4>").text(brewName);
-                dataSection.append(data)
-                var data = $("<p>").text(brewCity);
-                dataSection.append(data)
-                var data = $("<p>").text(brewStreet);
-                dataSection.append(data)
-                var data = $("<p>").text(brewPhone);
-                dataSection.append(data)
-                var data = $("<p>").text(brewUrl);
-                dataSection.append(data)
-                var map = $("<div class='cell' id='map" + i + "' style='float: right; width: 250px; height: 250px;'></div>")
+                var name = $("<h4>").addClass("card-divider").text(brewName);
+                dataSection.append(name);
+                var street = $("<p>").text(brewStreet);
+                dataSection.append(street);
+                var city = $("<p>").text(brewCity);
+                dataSection.append(city);
+                var phone = $("<p>").text(brewPhone);
+                dataSection.append(phone);
+                var url = $("<p>").text(brewUrl);
+                dataSection.append(url);
+                var map = $("<div id='map" + i + "' style='float: right; width: 250px; height: 250px;'></div>")
                 card.append(map)
                 // append that card to #5day
 
@@ -62,8 +61,6 @@ $(document).ready(function () {
                     console.log(i)
 
                 }
-
-                
 
             }
 
