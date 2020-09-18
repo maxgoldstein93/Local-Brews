@@ -17,6 +17,26 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (brewData) {
             console.log(brewData)
+            if(brewData.length === 0){
+                var newDiv = $("<div>").addClass();
+                var divMsg = $("<a>").text("Please enter a new zipcode there are no breweries in this area");
+                divMsg.attr("href", "index.html")
+                divMsg.css("font-size", "35px")
+                newDiv.append(divMsg);
+                $("#error").append(newDiv);
+                   
+            } else if(zipCode === "" || zipCode.length < 5){
+                
+                var newDiv = $("<div>").addClass();
+                var divMsg = $("<a>").text("Please enter a valid zipcode");
+                divMsg.attr("href", "index.html")
+                divMsg.css("font-size", "35px")
+                newDiv.append(divMsg);
+                console.log()
+                $("#error").append(newDiv);
+                return
+            }
+
             $("#brewDump").empty();
             for (var i = 0; i < brewData.length; i++) {
                 var lat = brewData[i].latitude;
@@ -40,6 +60,7 @@ $(document).ready(function () {
                 var dataSection = $("<div>").addClass("cell");
                 card.append(dataSection);
                 // fill it with data[i]
+<<<<<<< HEAD
                 var name = $("<h4>").addClass("card-divider").text(brewName);
                 dataSection.append(name);
                 var street = $("<p>").text(brewStreet);
@@ -48,9 +69,10 @@ $(document).ready(function () {
                 dataSection.append(city);
                 var phone = $("<p>").text(brewPhone);
                 dataSection.append(phone);
-                var url = $("<p>").text(brewUrl);
+                var url = $("<a style='color: blue !important;' href="+brewUrl+" target='_blank'>").text(brewUrl);
                 dataSection.append(url);
-                var map = $("<div id='map" + i + "' style='float: right; width: 250px; height: 250px;'></div>")
+                var map = $("<div class='cell' id='map" + i + "' style='float: right; width: 250px; height: 250px;'></div>")
+
                 card.append(map)
                 // append that card to #5day
 
