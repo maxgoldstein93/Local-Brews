@@ -22,6 +22,7 @@ $(document).ready(function () {
                 divMsg.attr("href", "index.html");
                 divMsg.css("font-size", "35px");
                 newDiv.append(divMsg);
+                $("#imgbackground").addClass("hero-full-screen");
                 $("#error").append(newDiv);
             } else if (zipCode === "" || zipCode.length < 5) {
                 var newDiv = $("<div>").addClass();
@@ -30,6 +31,7 @@ $(document).ready(function () {
                 divMsg.css("font-size", "35px");
                 newDiv.append(divMsg);
                 $("#error").append(newDiv);
+                $("#imgbackground").addClass("hero-full-screen");
                 return
             };
 
