@@ -16,15 +16,8 @@ $(document).ready(function () {
             url: queryUrl,
             method: "GET"
         }).then(function (brewData) {
-            if (brewData.length === 0) {
-                var newDiv = $("<div>").addClass();
-                var divMsg = $("<a>").text("Please enter a new zipcode there are no breweries in this area");
-                divMsg.attr("href", "index.html");
-                divMsg.css("font-size", "35px");
-                newDiv.append(divMsg);
-                $("#imgbackground").addClass("hero-full-screen");
-                $("#error").append(newDiv);
-            } else if (zipCode === "" || zipCode.length < 5) {
+            if (zipCode === "" || zipCode.length < 5 || zipCode.length > 5|| isNaN(zipCode)) {
+                console.log(zipCode)
                 var newDiv = $("<div>").addClass();
                 var divMsg = $("<a>").text("Please enter a valid zipcode");
                 divMsg.attr("href", "index.html");
@@ -33,6 +26,14 @@ $(document).ready(function () {
                 $("#error").append(newDiv);
                 $("#imgbackground").addClass("hero-full-screen");
                 return
+            } else if (brewData.length === 0) {
+                var newDiv = $("<div>").addClass();
+                var divMsg = $("<a>").text("Please enter a new zipcode there are no breweries in this area");
+                divMsg.attr("href", "index.html");
+                divMsg.css("font-size", "35px");
+                newDiv.append(divMsg);
+                $("#imgbackground").addClass("hero-full-screen");
+                $("#error").append(newDiv);
             };
 
             $("#brewDump").empty();
@@ -46,7 +47,7 @@ $(document).ready(function () {
                     var brewUrl = brewData[i].website_url;
                     var brewPhone = brewData[i].phone;
 
-                    var card = $("<div>").addClass("cell medium-4 large-4");
+                    var card = $("<div>").addClass("cell small medium-4 large-4");
                     var dataSection = $("<div>").addClass("card");
                     card.append(dataSection);
                     var name = $("<h4>").addClass("card-divider text-center").text(brewName);

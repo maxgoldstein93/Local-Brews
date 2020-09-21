@@ -1,5 +1,6 @@
 .hero-full-screen {
   height: 100vh;
+  
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -13,8 +14,25 @@
   background-size: cover;
 }
 
-.blackbackground {
-  background-color: rgb(60, 58, 58);}
+html, .blackbackground {
+  background-color: rgb(60, 58, 58);
+  height: 100vh;
+  display: -webkit-flex; 
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  
+  
+  
+ 
+  
+  
+}
 
 .top-bar {
  background-color: black !important;
@@ -37,14 +55,16 @@ a {
 .card {
   height: 280px;
   width: 300px;
-  background-color: grey !important;
+  background-color:grey !important;
   font-weight: bold !important;
   text-align: center;
+ 
 }
 
 .card-divider {
   background-color: black !important;
   color: white;
+  text-align: center !important;
 }
 
 .marker {
