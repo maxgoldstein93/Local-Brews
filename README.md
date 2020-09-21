@@ -1,4 +1,4 @@
-# Local Brews
+
 <h1>Local Brews</h1>
     <h3>Introduction</h3>
     <p>For this group project we had to use two different API's and create our own unique interactive webpage and as a group we wanted to do something with food and baverage related webpage. We decided to create Local Brews and with Local Brews people can find their local breweries by just using their ZipCode and the results will be displayed with breweries name, address and phone number also it will be pin pointed on the map. We used Open Brewery DB API to search for local breweries and use Mapbox to pin pointed on the map. For the framework side and styling, we have used Foundation.</p>
