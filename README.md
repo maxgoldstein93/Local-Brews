@@ -19,8 +19,8 @@
     </p>
     <h3>Developers</h3>
     <ul>
-        <li>Max Goldstein</li>
-        <li>Jen Iglar</li>
-        <li>Nodirbek Maksudov</li>
+        <li>Max Goldstei n- magoldstein93@gmail.com</li>
+        <li>Jen Iglar  - jeniglar@gmail.com</li>
+        <li>Nodirbek Maksudov - nodirbekmaksudov@yahoo.co </li>
     </ul>
 
